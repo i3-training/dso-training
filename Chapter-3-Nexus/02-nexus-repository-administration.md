@@ -21,7 +21,7 @@ You cant edit existing role provided by nexus, but you can edit user defined rol
 1. Log in to the Nexus Repository web interface as an administrator.
 2. Click on the "Security" menu item on the left-hand side of the screen.
 3. Click on the "Roles" tab.
-    ![Role](../../images/nexus-edit-role-home.png)
+    ![Role](/Chapter-3-Nexus/img/nexus-edit-role-home.png)
 4. Find the role you want to edit in the list of roles and click on its name.
 5. On the Role Details page, you can edit the name and description of the role
     ![Edit Role Setup](/Chapter-3-Nexus/img/nexus-edit-role.png)

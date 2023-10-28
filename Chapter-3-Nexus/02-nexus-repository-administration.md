@@ -58,20 +58,10 @@ Editing student work the same as Create new user, admin can select user to edit 
 
 ## Manage Repo
 
-### Create new Repository
-
-#### Create new Blob storage
+### Create new Blob storage
 
 Before create a new repository its a good idea to create a new blob storage to separate data between repository, in this case we will create a new blob storage to store our images, to create a new blob storage follow steps below.
 
 ![create blob](/Chapter-3-Nexus/img/nexus-blob.gif)
 
 Login to your nexus web console then open server administration and configuration, on the side bar click Blob stores then select Create Blob Store to create new blob storage, first select type as an file since we will using local storage, then give your blob a name and specify your blob location, you can also create Quota for your blob here after that save the change and new blob storage is created and ready to be use by an repository.
-
-#### Create Repo
-
-After creating blob to store our image binary, now we need create a repo, the repo will use blob that we created before as storage media, step by step will be shown by image below.
-
-![create repo](/Chapter-3-Nexus/img/nexus-newrepo.gif)
-
-After login open server administration and configuration menu then select repositories, click on Create repository here you will be have some option available select `docker (hosted)` to create internal registry, on Create repository form fill the option such name (indicate your repo name), Online (to accepts incoming requests), HTTP and give port that you want (user will connect to the registry via this port), on storage option select blob storage that we just created before, then create the repo.

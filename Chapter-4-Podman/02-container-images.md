@@ -89,15 +89,15 @@ vim Containerfile
 
 
 ```
-FROM docker.io/ubuntu:latest #1
-LABEL description="This is a custom httpd container image" #2 
-RUN apt install -y apache2 #3
-EXPOSE 80 #4
-ENV LogLevel "info" #5
-COPY index.html /var/www/html/ #7
+FROM docker.io/ubuntu:latest 
+LABEL description="This is a custom httpd container image" 
+RUN apt install -y apache2 
+EXPOSE 80 
+ENV LogLevel "info"
+COPY index.html /var/www/html/
 USER apache #8
-ENTRYPOINT ["/usr/sbin/apache2"] #9
-CMD ["-D", "FOREGROUND"] #10
+ENTRYPOINT ["/usr/sbin/apache2"] 
+CMD ["-D", "FOREGROUND"] 
 ```
 
 ```

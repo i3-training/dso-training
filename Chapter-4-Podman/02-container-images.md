@@ -95,7 +95,7 @@ RUN apt install -y apache2
 EXPOSE 80 
 ENV LogLevel "info"
 COPY index.html /var/www/html/
-USER apache #8
+USER apache 
 ENTRYPOINT ["/usr/sbin/apache2"] 
 CMD ["-D", "FOREGROUND"] 
 ```

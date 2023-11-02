@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+Access the Gitlab url <br>
+Enter username and password
+![Alt text](/Chapter-2-Gitlab/img/0-login.png)
+
 ## Create new project & push project from local to remote repository Gitlab
 
 Create a new project via the Gitlab dashboard

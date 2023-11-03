@@ -12,7 +12,6 @@ To set up a Docker Hub Proxy :
 ![](/Chapter-3-Nexus/img/proxy-2.png)
 
 
-
 **For the repo itself**
 - Click 'Repositories'
 ![](/Chapter-3-Nexus/img/proxy-repo-1.png)
@@ -31,10 +30,10 @@ To set up a Docker Hub Proxy :
 ![](/Chapter-3-Nexus/img/proxy-repo-6.png)
 ![](/Chapter-3-Nexus/img/proxy-repo-7.png)
 
-Enter the command below to clone the remote repository to your local machine <br>
-Edit the `registries.conf` file, whose default location is `/etc/containers/registries.conf` on Linux or 
+Enter the command below in your local machine <br>
+Edit the `registries.conf` file, whose default location is `/etc/containers/registries.conf` on Linux with Podman
 
-```config
+```
 [[registry]]
 location = "<ip_nexusrepository>:5051"
 insecure = true

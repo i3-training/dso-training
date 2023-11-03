@@ -7,31 +7,35 @@ To set up a Private Repository (Hosted):
 - Click 'Repositories'
 ![](/Chapter-3-Nexus/img/proxy-repo-1.png)
 - Click 'Create Repository' and select 'docker (hosted)'
-![](/Chapter-3-Nexus/img/hosted-repo-1.png)
-![](/Chapter-3-Nexus/img/hosted-repo-2.png)
+![](/Chapter-3-Nexus/img/hosted-1.png)
 - Give it some name 
-- Check 'HTTP' and give it a valid port (`8083`)
+- Check 'HTTP' and give it a valid port (`5052`)
+![](/Chapter-3-Nexus/img/hosted-2.png)
 - Under Storage > Blob Store, select the blob store you created earlier 
+![](/Chapter-3-Nexus/img/hosted-3.png)
 - Click 'Create Repository'
+![](/Chapter-3-Nexus/img/hosted-4.png)
+![](/Chapter-3-Nexus/img/hosted-5.png)
 
-Back to your VM machine <br>
+Enter the command below in your local machine <br>
 Edit the `registries.conf` file, whose default location is `/etc/containers/registries.conf` on Linux or 
 
-```config
+```
 [[registry]]
-location = "registry.example.com:8083"
+location = "<ip_nexusrepository>:5052"
 insecure = true
 ```
 
 save the `registries.conf` file and restart podman, to change take efect, after docker is restarted you can use login command above to login to your registry.
 
-#### Podman Login
+### Podman Login
 To connect to the repository, you will need to login using the podman cli:
 ```
-podman login registry.example.com:8083
+podman login <ip_nexusrepository>:5052
 ```
+![](/Chapter-3-Nexus/img/hosted-6.png)
 
-#### Create sample containerfile
+### Create sample containerfile
 ```
 vim Containerfile
 ```
@@ -41,25 +45,25 @@ FROM node:8.11-slim
 ```
 
 
-#### Build & Tagging private images
+### Build & Pushing private images
 When you build a container image you'd like to push to the private registry, be sure to prefix the image name with the registry url.
 
 Example:
 
 ```
-podman build -t localhost:8083/myimage:latest .
+podman build -t <ip_nexusrepository>:5052/testing-hosted:v1.0 .
 ```
-![](/Chapter-3-Nexus/img/hosted-repo-3.png)
+![](/Chapter-3-Nexus/img/hosted-7.png)
 
 Once it has been built, you can push it to the registry:
 
 ```
-podman push localhost:8083/myimage:latest
+podman push <ip_nexusrepository>:5052/testing-hosted:v1.0
 ```
-![](/Chapter-3-Nexus/img/hosted-repo-4.png)
+![](/Chapter-3-Nexus/img/hosted-8.png)
 
-Successfully store your image to private remote repository
-![](/Chapter-3-Nexus/img/hosted-repo-5.png)
+Successfully store your image to hosted repository
+![](/Chapter-3-Nexus/img/hosted-9.png)
 
 
 

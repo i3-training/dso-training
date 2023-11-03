@@ -57,4 +57,21 @@ Fix issue severity high on file config.py line 16, 17, 18
 
 ![Alt text](/Chapter-5-SecretCheck/img/16-result-secret-check.png)
 
+Edit file config.py <br> 
+Before :
 
+![Alt text](/Chapter-5-SecretCheck/img/17-before-fix.png)
+
+After:
+
+![Alt text](/Chapter-5-SecretCheck/img/18-after-fix.png)
+
+- Rescan Secret Check
+
+![Alt text](/Chapter-5-SecretCheck/img/19-result-fixing.png)
+
+## Generate Report Secret Check
+
+Report > Application Security > Secret Check
+
+![Alt text](/Chapter-5-SecretCheck/img/20-report-secret-check.png)

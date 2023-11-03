@@ -4,8 +4,8 @@
 
 - Login gitlab
 
-url: https://gitlab.i3datacenter.my.id/users/sign_in
-username : student-01
+url: https://gitlab.i3datacenter.my.id/users/sign_in <br>
+username : student-01 <br>
 password : rahasia
 
 ![Alt text](/Chapter-5-SecretCheck/img/08-gitlab-login.png)

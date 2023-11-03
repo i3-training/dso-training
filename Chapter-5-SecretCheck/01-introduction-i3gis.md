@@ -27,10 +27,4 @@ Organization is ....
 - Success Create Organization 
 ![Alt text](/Chapter-5-SecretCheck/img/06-i3gis-success-org.png)
 
-# Application Security
-## Create Project
-Project is ....
-- Create new project 
-![Alt text](/Chapter-5-SecretCheck/img/07-i3gis-create-project.png)
-
 

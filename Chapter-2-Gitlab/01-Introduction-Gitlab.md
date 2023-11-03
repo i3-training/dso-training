@@ -29,8 +29,8 @@ mv dso-training/Chapter-2-Gitlab/sample-apps-chapter-2/* lab-gitlab/
 
 Enter the command below to configure Git credentials
 ```
-git config --global user.email "rizkypanca386@gmail.com"
-git config --global user.name "pancaperkasa" 
+git config --global user.email "student-01@gmail.com"
+git config --global user.name "student-01" 
 ```
 
 Return to the Github web project dashboard that we have created <br>
@@ -42,7 +42,7 @@ Initiate git on the project in the local machine and connect it to the repositor
 ```
 git init
 git branch -m main
-git remote add origin https://gitlab.com/pancaperkasa/scm-gitlab.git
+git remote add origin http://bastion.com/student-01/lab-gitlab.git
 ```
 
 

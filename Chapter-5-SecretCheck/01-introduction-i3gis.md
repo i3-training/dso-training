@@ -1,10 +1,20 @@
-# Introduction i3gis
+Introduction i3gis
+==================
 
-## Create a new Organization in i3gis
+In this scenario, you will learn how to create oorganization in i3gis.
 
-Access the i3gis url <br>
-username : student-x <br> 
-password : rahasia-x
+i3gis Dashboard 
+---------------
+> Link : i3gis.i3datacenter.my.id
+> 
+> Username : student-x
+> 
+> Password : rahasia
+>
+
+
+Create a new Organization in i3gis
+----------------------------------
 
 ![Alt text](/Chapter-5-SecretCheck/img/01-i3gis-login.png)
 
@@ -26,11 +36,5 @@ Organization is ....
 
 - Success Create Organization 
 ![Alt text](/Chapter-5-SecretCheck/img/06-i3gis-success-org.png)
-
-# Application Security
-## Create Project
-Project is ....
-- Create new project 
-![Alt text](/Chapter-5-SecretCheck/img/07-i3gis-create-project.png)
 
 

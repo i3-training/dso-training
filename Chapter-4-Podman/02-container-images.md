@@ -78,28 +78,73 @@ preserving the build-time variables for runtime.
 
 Defines where to store data outside of the container. The value configures the path where Podman mounts persistent volume inside of the container. You can define more than one path to create multiple volumes.
 
-
-
 Each Containerfile instruction runs in an independent container by using an intermediate image built from every previous command. This means each instruction is independent from other instructions in the Containerfile. The following is an example Containerfile for building a simple Apache web server container:
 
+Create sample Containerfile to build Container Images
 ```
+mkdir sample-container-images
+cd sample-container-images/
 echo "testing" >> index.html
 vim Containerfile
 ```
 
-
+Enter the command below
 ```
-FROM docker.io/ubuntu:latest 
-LABEL description="This is a custom httpd container image" 
-RUN apt install -y apache2 
-EXPOSE 80 
-ENV LogLevel "info"
+FROM docker.io/ubuntu:latest
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update
+RUN apt-get install apache2 -y
+RUN apt-get install apache2-utils -y
+RUN apt-get clean
+EXPOSE 80
+
 COPY index.html /var/www/html/
-USER apache 
-ENTRYPOINT ["/usr/sbin/apache2"] 
-CMD ["-D", "FOREGROUND"] 
+CMD ["apache2ctl","-D","FOREGROUND"]
 ```
 
+Build Container Images from Containerfile you have created
 ```
-podman build -t test-image:v1 .
+podman build -t sample-images:v1 .
 ```
+
+Run your container images
+```
+podman run -d -p 8080:80 sample-images:v1
+```
+
+Test the application
+```
+curl <ip_address_machine:8080>
+```
+![](/Chapter-4-Podman/img/containerfile-1.png)
+
+
+## Optimizing container images
+```
+mkdir optimize-container-images
+cd optimize-container-images/
+echo "testing" >> index.html
+vim Containerfile
+```
+
+Enter the command below
+```
+FROM docker.io/httpd:latest
+COPY index.html /usr/local/apache2/htdocs/
+```
+
+Build Container Images from Containerfile you have created
+```
+podman build -t sample-images:v2 .
+```
+
+Run your container images
+```
+podman run -d -p 8085:80 sample-images:v2
+```
+
+Test the application
+```
+curl <ip_address_machine:8085>
+```
+![](/Chapter-4-Podman/img/containerfile-2.png)

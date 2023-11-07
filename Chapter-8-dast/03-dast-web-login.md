@@ -24,11 +24,26 @@ i3gis by default have 5 engine dast
 
 Result Scan
 -----------
+![Alt text](/Chapter-8-dast/img/29-dast.png)
+![Alt text](/Chapter-8-dast/img/30-dast.png)
 
+![Alt text](/Chapter-8-dast/img/31-dast.png)
+![Alt text](/Chapter-8-dast/img/32-dast.png)
 
+Result Scan Invalid Auth
+------------------------
+
+![Alt text](/Chapter-8-dast/img/33-dast.png)
+![Alt text](/Chapter-8-dast/img/35-dast.png)
+
+Scan History
+------------
+
+![Alt text](/Chapter-8-dast/img/36-dast.png)
 
 Generate Report DAST
 -----------------------------
 
 Report > Dynamic Security
 
+![Alt text](/Chapter-8-dast/img/34-dast.png)
